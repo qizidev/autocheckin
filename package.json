@@ -1,0 +1,25 @@
+{
+  "name": "autosign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "superagent": "^1.6.1",
+    "later": "^1.2.0",
+    "phantomjs": "^1.9.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qizigod/autocheckin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qizigod/autocheckin/issues"
+  },
+  "homepage": "https://github.com/qizigod/autocheckin#readme"
+}
