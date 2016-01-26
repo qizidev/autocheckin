@@ -6,7 +6,7 @@
   "dependencies": {
     "later": "^1.2.0",
     "phantomjs": "^1.9.19",
-    "superagent": "^1.6.1",
+    "superagent": "^1.6.1"
   },
   "devDependencies": {},
   "scripts": {
