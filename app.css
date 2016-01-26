@@ -1,0 +1,11 @@
+header.title {
+    text-align: center;
+}
+section.content {
+    margin: 0 auto;
+}
+section.content section ul.list {
+    margin: 0 auto;
+    padding: 5px 10px;
+    list-style: none;
+}
