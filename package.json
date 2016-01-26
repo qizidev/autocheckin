@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "superagent": "^1.6.1",
     "later": "^1.2.0",
-    "phantomjs": "^1.9.19"
+    "phantomjs": "^1.9.19",
+    "superagent": "^1.6.1",
   },
   "devDependencies": {},
   "scripts": {

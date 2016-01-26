@@ -5,6 +5,11 @@ var headers = config.smzdm.headers;
 var data = config.smzdm.data;
 var url = config.smzdm.url;
 
+var postData = "username=" + encodeURIComponent(data.username)
+					+"&password=" + encodeURIComponent(data.password)
+					+"&rememberme=" + ""
+					+"&captcha=" + "";
+
 var autosignin = function(){
 	this.cookie = {
 		value: null
@@ -12,30 +17,32 @@ var autosignin = function(){
 	var that = this;
 
 	var _login = function(){
+		console.log("login started");
 		request
 			.post(url.login)
 			.set(headers)
 			.type('json')
-			.send(data)
+			.send(postData)
 			.redirects(0)
 			.end(function(err, res){
 				if(err) console.log(err);
 				var cookie = res.header['set-cookie'].join();
-				console.log(cookie);
+				console.log("cookie = " + cookie);
 				that.cookie.value = cookie;
+				console.log('login finished');
+				_checkin();
 			});
-		console.log('login started');
-		_checkin();
 	};
 
 	var _checkin = function(){
+		console.log("checkin start");
 		request
-			.get(url.checkin)
+			.get(url.checkin + 'callback=callback')
 			.set('Cookie',that.cookie.value)
 			.end(function(err, res){
 				if(err) console.log(err);
-				console.log(res.body);
-				console.log('签到完成');
+				console.log("res.body = " + res.body);
+				console.log('checkin finish');
 			})
 	};
 
